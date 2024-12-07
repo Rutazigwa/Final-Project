@@ -1,0 +1,300 @@
+/* Root Variable */
+:root {
+  --white: rgb(255, 253, 250);
+}
+
+/* Font Import */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Whole Page */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat"; /* Global font */
+}
+
+/* nav image styling */
+img,
+svg {
+  height: 40px;
+}
+
+/*  Navbar  */
+.navbar {
+  background-color: white;
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem; /* toggle icon bigger */
+}
+
+.nav-item .nav-link {
+  color: rgba(0, 0, 0, 0.73);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.nav-link:hover {
+  color: black;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.btn-navbar {
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid black;
+  border-radius: 50px;
+}
+
+.btn-navbar:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid white;
+}
+
+/*  Hero Section */
+.hero {
+  height: 83vh;
+  background: linear-gradient(360deg, #007bff, #6610f2); /* Starting gradient */
+  animation: gradientAnimation 5s infinite ease-in-out; /* looping effect */
+  color: white;
+}
+/* Animation to make the gradient background. */
+@keyframes gradientAnimation {
+  0% {
+    background: linear-gradient(360deg, #007bff, #6610f2);
+  }
+  50% {
+    background: linear-gradient(
+      360deg,
+      #6610f2,
+      #007bff
+    ); /* Midway swap for the effect */
+  }
+  100% {
+    background: linear-gradient(360deg, #007bff, #6610f2);
+  }
+}
+
+.hero-content h1 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero-content p {
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.btn-primary,
+.btn-outline-light {
+  border-radius: 50px;
+  padding: 10px 30px;
+}
+
+/*  Resume Section  */
+#resume p {
+  margin-top: 0;
+  font-weight: 400;
+}
+
+/*  Skills Progress Bars  */
+.progress + .d-flex {
+  margin-top: -20px;
+  font-size: 0.9rem;
+}
+
+.progress-bar {
+  transition: width 2s ease-in-out;
+}
+
+/*  Contact Section  */
+.contact-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+.contact-container h2 {
+  text-align: center;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.contact-container p {
+  text-align: center;
+  font-size: 16px;
+  color: #555555;
+  margin-bottom: 30px;
+}
+
+.form-control,
+.btn {
+  border-radius: 6px;
+}
+
+.btn-primary {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: gray;
+  color: black;
+}
+
+/*  Project Card Styles  */
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  animation: bounce 3s infinite;
+  box-shadow: 0px 15px 25px rgba(194, 41, 41, 0.2);
+}
+
+.card-img-top {
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/*  Footer */
+.bi-instagram,
+.bi-linkedin,
+.bi-facebook {
+  height: 16px;
+  width: 16px;
+}
+
+/* Theme light/dark */
+.darklight-theme {
+  display: flex;
+  flex-direction: row;
+}
+
+.bi.bi-brightness-high-fill {
+  height: 32px;
+  color: #ffd300;
+}
+
+.bi.bi-moon-stars-fill {
+  height: 32px;
+  color: black;
+}
+
+.bi.bi-moon-stars-fill:hover {
+  color: darkcyan;
+}
+
+.bi.bi-brightness-high-fill:hover {
+  color: darkorange;
+}
+
+input[name="page-theme"] {
+  display: none;
+}
+
+/*  Dark Mode */
+input#dark-theme-setting:checked ~ main {
+  background-color: black !important;
+  color: white;
+}
+
+input#dark-theme-setting:checked ~ main nav {
+  background-color: black;
+  color: white;
+}
+
+input#dark-theme-setting:checked ~ main #offcanvasNavbar {
+  background-color: black !important;
+  color: white;
+}
+
+input#dark-theme-setting:checked ~ main .btn-close {
+  filter: invert(100%);
+  opacity: 1;
+}
+
+input#dark-theme-setting:checked ~ main .btn-close:hover {
+  filter: invert(100%) brightness(80%);
+}
+
+input#dark-theme-setting:checked ~ main .navbar-toggler {
+  filter: invert(100%);
+}
+
+input#dark-theme-setting:checked ~ main .navbar-toggler:hover {
+  filter: invert(100%) brightness(80%);
+}
+
+input#dark-theme-setting:checked ~ main .nav-link {
+  color: white;
+}
+
+input#dark-theme-setting:checked ~ main .card {
+  background-color: #353839;
+  color: var(--white);
+}
+
+input#dark-theme-setting:checked ~ main .nav-link.active {
+  color: darkcyan;
+}
+
+input#dark-theme-setting:checked ~ main #welcome {
+  background-color: black;
+}
+
+input#dark-theme-setting:checked ~ main #footer .text-body-secondary {
+  color: var(--white) !important;
+}
+
+input#dark-theme-setting:checked ~ main #about {
+  color: var(--white) !important;
+  background-color: #121212;
+}
+
+input#dark-theme-setting:checked ~ main #about h6.text-muted {
+  color: var(--white) !important;
+}
+
+input#dark-theme-setting:checked ~ main #about img.icon {
+  color: var(--white) !important;
+}
+
+input#dark-theme-setting:checked ~ main #about .bg-light {
+  background-color: #444444 !important;
+}
+input#dark-theme-setting:checked ~ main #resume .bg-body-tertiary {
+  background-color: black !important;
+  color: var(--white) !important;
+  border: 5px solid white;
+}
+input#dark-theme-setting:checked ~ main #resume .text-body-emphasis {
+  color: var(--white) !important;
+}
+
+/*  Footer  */
+footer {
+  height: 11.3vh;
+}
